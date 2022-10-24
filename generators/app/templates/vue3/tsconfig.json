@@ -1,0 +1,43 @@
+{
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ],
+  "compilerOptions": {
+    // "declaration": true,
+    // "composite": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+    }, 
+    // "allowJs": false,
+    // "esModuleInterop": false,
+    "types": [
+      "element-plus/global",
+      "vitest",
+      "vite/client",
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-pages/client",
+      "@intlify/vite-plugin-vue-i18n/client",
+    ],
+  },
+  "include": [
+    "src/*",
+    "src/**/*.vue",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.d.ts",
+  ]
+}
