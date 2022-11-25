@@ -9,10 +9,10 @@ const { get, each, startsWith } = require('lodash');
 module.exports = class extends Generator {
   initializing () {
     this.defaults = {
-      template: 'vue3',
-      packageName: 'vue3-template-test',
-      packageDescription: 'vue3 project template',
-      packageKeywords: '关键词'
+      template: 'vue3-desktop',
+      packageName: 'vue-template-project',
+      packageDescription: 'vue project template',
+      packageKeywords: 'vue'
     }
     this.props = {}
   }
@@ -29,7 +29,8 @@ module.exports = class extends Generator {
         name: 'template',
         message: '选择初始化模板',
         choices: [
-          { name: 'vue3', value: 'vue3' }
+          { name: 'vue3 桌面端', value: 'vue3-desktop' },
+          { name: 'vue3 移动端', value: 'vue3-mobile' },
         ],
         default: get(this.defaults, 'template')
       },
